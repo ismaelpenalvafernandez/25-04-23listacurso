@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Cursos } from './model/cursos';
-import { ModificarComponent } from './modificar/modificar.component';
-
+import { AppComponent } from './app.component';
+import { ComponentelistaComponent } from './componentelista/componentelista.component';
+import { ComponentemodificarComponent } from './componentemodificar/componentemodificar.component';
 const routes: Routes = [
-  { path: "modificar", component:ModificarComponent  },
-];
+  {path: '',component:ComponentelistaComponent,children: [
+  { path: 'listar', component: ComponentelistaComponent },
+  { path: 'modificar/:id', component: ComponentemodificarComponent },
+  ],
+  },
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

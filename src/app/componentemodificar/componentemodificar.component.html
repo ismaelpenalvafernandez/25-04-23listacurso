@@ -1,0 +1,35 @@
+<div *ngIf="dato==0; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+<label for="nombre">ID: </label>
+<input type="number" id="id" name="id" [(ngModel)]="curso.id" /><br />
+<label for="nombre">Nombre: </label>
+<input id="number" id="nombre" name="nombre" [(ngModel)]="curso.nombre" /><br />
+<label for="b">Duración: </label>
+<input type="number" id="duracion" name="duracion" [(ngModel)]="curso.duracion" /><br />
+<label for="precio">Nivel: </label>
+<select name="" id="" [(ngModel)]="curso.nv">
+  <option value="Bajo">Bajo</option>
+  <option value="Medio">Medio</option>
+  <option value="Alto">Alto</option>
+</select>
+
+<input type="submit" value="Alta" routerLink="" (click)="anadir()" />
+</ng-template>
+
+    <ng-template #elseBlock>
+    <label for="nombre">ID: </label>
+    <input type="number" id="id" name="id" [(ngModel)]="curso.id" /><br />
+    <label for="nombre">Nombre: </label>
+    <input id="number" id="nombre" name="nombre" [(ngModel)]="curso.nombre" /><br />
+    <label for="b">Duración: </label>
+    <input type="number" id="duracion" name="duracion" [(ngModel)]="curso.duracion" /><br />
+    <label for="precio">Nivel: </label>
+    <select name="" id="" [(ngModel)]="curso.nv">
+      <option value="Bajo">Bajo</option>
+      <option value="Medio">Medio</option>
+      <option value="Alto">Alto</option>
+    </select>
+<input type="submit" value="Modificar" routerLink="" (click)="addmodificar()" />
+
+</ng-template>
+

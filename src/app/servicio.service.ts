@@ -16,6 +16,9 @@ export class ServiciocursosService {
  addCursos(curso: Cursos) {
   this.micurso.push(curso);
  }
+ getcursoyid(dato : number){
+  return this.micurso.find(curso => curso.id==dato)
+  }
  getcurso():Cursos[]{
    return this.micurso
  }
